@@ -115,6 +115,7 @@ const Flaggen = () => {
   const startQuiz = () => {
     setStartTime(Date.now());
   };
+
   function back() {
     window.location.reload();
   }
