@@ -250,8 +250,6 @@ const Flaggen = () => {
           <div className="flag-section">
             <div className="flag-count">
               Flagge {currentFlag + 1} von {flaggen.length}
-            </div>
-            <div>
               <span className="time-num">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/850/850960.png"
@@ -260,6 +258,7 @@ const Flaggen = () => {
                 {timer}
               </span>
             </div>
+            <div></div>
             <img
               src={flaggen[currentFlag].flag}
               alt="Flagge"

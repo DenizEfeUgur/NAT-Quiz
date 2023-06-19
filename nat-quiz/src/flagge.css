@@ -12,15 +12,14 @@
   }
   .time-num{
     color:white;
-    display: flex;
-    justify-content: center;
     margin: 10px;
   }
 
   .time-image{
-    height: 35px;
+    height: 20px;
     width: auto;
     margin-right: 5px;
+    margin-left: 200px;
   }
   .score-section {
     text-align: center;
