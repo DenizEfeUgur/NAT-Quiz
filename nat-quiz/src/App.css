@@ -1,38 +1,133 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Delicious+Handrawn&family=Montserrat+Alternates:wght@700&family=Rock+Salt&family=Shadows+Into+Light&family=Work+Sans&display=swap');
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+}
+
+.efe{
+  color: whitesmoke;
+
+  display: flex;
+  justify-content: end;
+  margin-top: 75px;
+  font-size: 19px;
+}
+
+.h1{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -45px;
+}
+
+.App .image-container img:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  margin: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pic {
+  width: auto;
+  height: 19vw;
+  cursor: pointer;
+  margin-top: 200px;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.lbl {
+  background-color: white;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: -30px;
+  z-index: 1;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pic:hover {
+  transform: scale(1.01);
+}
+
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App #root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.App .image-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .pic {
+    height: 200px;
+    margin-top: 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App .image-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .App .image-container img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 24px;
+  }
+
+  .pic {
+    height: 150px;
+    margin-top: 30px;
+  }
+
+  .App .image-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .App .image-container img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
   }
 }
