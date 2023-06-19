@@ -1,0 +1,143 @@
+.quiz-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  .wrong-quiz-app{
+    margin-top: 1400px;
+  
+  }
+  .time-num{
+    color:white;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .time-image{
+    height: 35px;
+    width: auto;
+    margin-right: 5px;
+  }
+  .score-section {
+    text-align: center;
+  }
+  
+  .flag-section {
+    text-align: center;
+  }
+  .score-count{
+    color:white;
+  }
+  .time{
+    color: white;
+    font-size: 100px;
+  }
+  .flag-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5264c5;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .flag-image {
+    max-width: auto;
+    max-height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5264c5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #314190;
+  }
+  
+  .score-section strong {
+    font-size: 24px;
+  }
+  
+  .score-section button {
+    background-color: #ff5f6d; 
+  color: #ffffff; 
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 50px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease; 
+    margin-bottom: 10px;
+  }
+  
+  .score-section button:hover {
+    background-color: #ff3c4e;
+  } 
+  
+  .image {
+    max-width: 70px;
+    margin-left: 10px;
+  }
+  
+  .image:last-child {
+    margin-left: 0;
+  }
+  
+  .wrong-answers {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .wrong-answers div {
+    margin-bottom: 10px;
+  }
+  
+  .wrong-answers span {
+    font-weight: bold;
+  }
+  .card {
+    background-color: #5264c5;
+    color: white;
+    width: 1450px;
+    height: 85px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    transition: box-shadow 0.3s ease;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.003);
+  }
+  
+  .card .image {
+    position: absolute;
+    top: 50%; 
+    right: 20px;
+    transform: translateY(-50%); 
+    width: 65px;
+    height: 60px;
+  }
+  
+  

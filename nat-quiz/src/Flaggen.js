@@ -1,9 +1,14 @@
 /** @format */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./flagge.css";
+import Confetti from "react-confetti";
 
 const Flaggen = () => {
+  const [scrollDisabled, setScrollDisabled] = useState(true);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [timer, setTimer] = useState(0);
+  const [startTime, setStartTime] = useState(0);
   const flaggen = [
     {
       flag: "https://cdn.pixabay.com/photo/2012/04/10/23/11/switzerland-26891_1280.png",
@@ -107,7 +112,175 @@ const Flaggen = () => {
       answer: "Kasachstan",
     },
   ];
-  return null;
+  const startQuiz = () => {
+    setStartTime(Date.now());
+  };
+  function back() {
+    window.location.reload();
+  }
+
+  const [currentFlag, setCurrentFlag] = useState(0);
+  const [score, setScore] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [wrongAnswers, setWrongAnswers] = useState([]);
+  const [correctAnswers, setCorrectAnswers] = useState([]);
+
+  const handleAnswerButtonClick = (selectedAnswer) => {
+    if (selectedAnswer === flaggen[currentFlag].answer) {
+      setScore(score + 1);
+      setCorrectAnswers([...correctAnswers, flaggen[currentFlag]]);
+    } else {
+      const wrongAnswer = {
+        flag: flaggen[currentFlag].flag,
+        selectedAnswer,
+        correctAnswer: flaggen[currentFlag].answer,
+      };
+      setWrongAnswers([...wrongAnswers, wrongAnswer]);
+    }
+
+    const nextFlag = currentFlag + 1;
+    if (nextFlag < flaggen.length) {
+      setCurrentFlag(nextFlag);
+    } else {
+      setShowConfetti(true);
+      setShowScore(true);
+    }
+  };
+
+  useEffect(() => {
+    if (scrollDisabled) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [scrollDisabled]);
+
+  useEffect(() => {
+    let interval;
+    if (!showScore) {
+      interval = setInterval(() => {
+        setTimer((prevTimer) => prevTimer + 1);
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [showScore]);
+
+  useEffect(() => {
+    let timer;
+    if (showConfetti) {
+      timer = setTimeout(() => {
+        setScrollDisabled(false);
+        setShowConfetti(false);
+      }, 4000);
+    }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [showConfetti]);
+
+  return (
+    <>
+      {showConfetti && <Confetti />}
+      <button className="exit-button" onClick={back}>
+        exit Quiz
+      </button>
+      <div className="quiz-app">
+        {showScore ? (
+          <div className="score-section">
+            <div className="wrong-quiz-app">
+              <strong className="score-count">
+                Du hast {score} von {flaggen.length} Fragen in {timer} Sekunden
+                richtig beantwortet
+              </strong>
+            </div>
+            <div>
+              <br />
+              {flaggen.map((flag, index) => (
+                <div
+                  className={
+                    correctAnswers.findIndex(
+                      (answer) => answer.flag === flag.flag
+                    ) !== -1
+                      ? "card"
+                      : "card"
+                  }
+                  key={index}
+                >
+                  <img src={flag.flag} alt="Flagge" className="image" />
+                  {correctAnswers.findIndex(
+                    (answer) => answer.flag === flag.flag
+                  ) !== -1 && (
+                    <>
+                      <strong>Korrekte Antwort:</strong> {flag.answer}
+                      <img
+                        className="image"
+                        src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png"
+                        alt="Correct"
+                      />
+                    </>
+                  )}
+                  {wrongAnswers.findIndex(
+                    (answer) => answer.flag === flag.flag
+                  ) !== -1 && (
+                    <>
+                      <strong>Deine Antwort:</strong>{" "}
+                      {
+                        wrongAnswers.find((answer) => answer.flag === flag.flag)
+                          .selectedAnswer
+                      }
+                      <br />
+                      <strong>Korrekte Antwort:</strong>{" "}
+                      {
+                        wrongAnswers.find((answer) => answer.flag === flag.flag)
+                          .correctAnswer
+                      }
+                      <img
+                        className="image"
+                        src="https://static.vecteezy.com/system/resources/previews/017/178/056/non_2x/red-cross-mark-on-transparent-background-free-png.png"
+                        alt="Incorrect"
+                      />
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+            <button onClick={back}>Go Back</button>
+          </div>
+        ) : (
+          <div className="flag-section">
+            <div className="flag-count">
+              Flagge {currentFlag + 1} von {flaggen.length}
+            </div>
+            <div>
+              <span className="time-num">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/850/850960.png"
+                  className="time-image"
+                />
+                {timer}
+              </span>
+            </div>
+            <img
+              src={flaggen[currentFlag].flag}
+              alt="Flagge"
+              className="flag-image"
+            />
+            <div className="answer-options">
+              {flaggen[currentFlag].options.map((option, index) => (
+                <button
+                  className="btn"
+                  key={index}
+                  onClick={() => handleAnswerButtonClick(option)}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </>
+  );
 };
 
 export default Flaggen;
