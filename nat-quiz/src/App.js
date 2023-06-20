@@ -7,7 +7,6 @@ import "./App.css";
 import Allgemein from "./Allgemein";
 import Tier from "./Tier";
 import Flaggen from "./Flaggen";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

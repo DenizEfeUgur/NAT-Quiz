@@ -8,7 +8,6 @@ const Allgemein = () => {
   const [scrollDisabled, setScrollDisabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const [timer, setTimer] = useState(0);
-  const [startTime, setStartTime] = useState(0);
 
   const questions = [
     {
