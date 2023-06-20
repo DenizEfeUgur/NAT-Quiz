@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/NAT-Quiz/static/css/main.c282b144.css",
-    "main.js": "/NAT-Quiz/static/js/main.0e1a57db.js",
+    "main.js": "/NAT-Quiz/static/js/main.6dc8769f.js",
     "index.html": "/NAT-Quiz/index.html",
     "main.c282b144.css.map": "/NAT-Quiz/static/css/main.c282b144.css.map",
-    "main.0e1a57db.js.map": "/NAT-Quiz/static/js/main.0e1a57db.js.map"
+    "main.6dc8769f.js.map": "/NAT-Quiz/static/js/main.6dc8769f.js.map"
   },
   "entrypoints": [
     "static/css/main.c282b144.css",
-    "static/js/main.0e1a57db.js"
+    "static/js/main.6dc8769f.js"
   ]
 }
