@@ -11,9 +11,13 @@ body {
 
   display: flex;
   justify-content: end;
-  margin-top: 75px;
+  margin-top: 80px;
+  margin-right: 20px;
   font-size: 19px;
+  
 }
+
+
 
 .h1{
   color: white;

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import "./tier.css";
+import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
 
 function Tier() {
   const [scrollDisabled, setScrollDisabled] = useState(true);
@@ -212,7 +213,7 @@ function Tier() {
     <>
       {showConfetti && <Confetti />}
       <button className="exit-button" onClick={back}>
-        exit Quiz
+        <ExitToAppTwoToneIcon />
       </button>
       <div className="quiz-app">
         {showScore ? (
@@ -276,14 +277,14 @@ function Tier() {
                 </div>
               ))}
             </div>
-            <button onClick={back}>Go Back</button>
+            <button onClick={back}>
+              <ExitToAppTwoToneIcon className="test" />
+            </button>
           </div>
         ) : (
           <div className="question-section">
             <div className="question-count">
               Frage {currentQuestion + 1} von {questions.length}
-            </div>
-            <div>
               <span className="time-num">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/850/850960.png"

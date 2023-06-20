@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./flagge.css";
 import Confetti from "react-confetti";
+import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
 
 const Flaggen = () => {
   const [scrollDisabled, setScrollDisabled] = useState(true);
@@ -183,7 +184,7 @@ const Flaggen = () => {
     <>
       {showConfetti && <Confetti />}
       <button className="exit-button" onClick={back}>
-        exit Quiz
+        <ExitToAppTwoToneIcon />
       </button>
       <div className="quiz-app">
         {showScore ? (
@@ -245,7 +246,10 @@ const Flaggen = () => {
                 </div>
               ))}
             </div>
-            <button onClick={back}>Go Back</button>
+            <button onClick={back}>
+              {" "}
+              <ExitToAppTwoToneIcon />
+            </button>
           </div>
         ) : (
           <div className="flag-section">

@@ -35,6 +35,9 @@
   padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .question-text{
@@ -70,6 +73,21 @@
   transition: background-color 0.3s ease;
 }
 
+.time-num {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.time-image {
+  height: 20px;
+  width: auto;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+
+
 .btn:hover {
   background-color: #314190;
 }
@@ -89,6 +107,7 @@
   color: #ffffff;
   padding: 10px 20px;
   border: none;
+  margin: 7px;
   border-radius: 4px;
   font-size: 15px;
   cursor: pointer;
@@ -147,5 +166,8 @@
 
   .card {
     max-width: 100%;
+  }
+  .time-image {
+    margin-bottom: 0;
   }
 }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import "./allgemein.css";
+import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
 
 const Allgemein = () => {
   const [scrollDisabled, setScrollDisabled] = useState(true);
@@ -217,7 +218,7 @@ const Allgemein = () => {
     <>
       {showConfetti && <Confetti />}
       <button className="exit-button" onClick={back}>
-        exit Quiz
+        <ExitToAppTwoToneIcon />
       </button>
       <div className="quiz-app">
         {showScore ? (
@@ -281,14 +282,15 @@ const Allgemein = () => {
                 </div>
               ))}
             </div>
-            <button onClick={back}>Go Back</button>
+            <button onClick={back}>
+              {" "}
+              <ExitToAppTwoToneIcon />
+            </button>
           </div>
         ) : (
           <div className="question-section">
             <div className="question-count">
               Frage {currentQuestion + 1} von {questions.length}
-            </div>
-            <div>
               <span className="time-num">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/850/850960.png"
