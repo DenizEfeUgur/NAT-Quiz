@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/NAT-Quiz/static/css/main.aeef0b6d.css",
+    "main.css": "/NAT-Quiz/static/css/main.cd66fa9e.css",
     "main.js": "/NAT-Quiz/static/js/main.f6c626d4.js",
     "static/media/logo.png": "/NAT-Quiz/static/media/logo.4780ba6b09480659c5c3.png",
     "static/media/success-fanfare-trumpets-6185.mp3": "/NAT-Quiz/static/media/success-fanfare-trumpets-6185.37b45d4b4b0828435ef4.mp3",
     "index.html": "/NAT-Quiz/index.html",
-    "main.aeef0b6d.css.map": "/NAT-Quiz/static/css/main.aeef0b6d.css.map",
+    "main.cd66fa9e.css.map": "/NAT-Quiz/static/css/main.cd66fa9e.css.map",
     "main.f6c626d4.js.map": "/NAT-Quiz/static/js/main.f6c626d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeef0b6d.css",
+    "static/css/main.cd66fa9e.css",
     "static/js/main.f6c626d4.js"
   ]
 }
