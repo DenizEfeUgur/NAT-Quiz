@@ -17,7 +17,15 @@ body {
   
 }
 
-
+.logo_nat{
+  width: auto;
+  height: 69px;
+  position: absolute;
+  margin-top: -69px;
+  
+  left: 93.9%;
+  /* bottom: 80%; */
+}
 
 .h1{
   color: white;
