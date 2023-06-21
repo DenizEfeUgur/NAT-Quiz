@@ -16,7 +16,7 @@ function Tier() {
     {
       question: "Was ist das kleinste Tier der Welt?",
       bild: "https://cdn.pixabay.com/photo/2016/05/30/14/23/detective-1424831_1280.png",
-      options: ["Myxobolus shekel ", "Ameise", "kaulquappe", "Laus"],
+      options: ["Myxobolus shekel ", "Ameise", "Kaulquappe", "Laus"],
       answer: "Myxobolus shekel ",
     },
     {

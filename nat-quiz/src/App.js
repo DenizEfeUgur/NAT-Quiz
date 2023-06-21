@@ -6,7 +6,6 @@ import "./App.css";
 import Allgemein from "./Allgemein";
 import Tier from "./Tier";
 import Flaggen from "./Flaggen";
-import logo from "./logo.png";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -26,11 +25,6 @@ function App() {
   return (
     <>
       <h1 className="h1">Willkommen im NÄT_Quiz</h1>
-      <img
-        // src="https://o.remove.bg/downloads/0d554e69-1ae0-4d8b-a35e-b092dede6888/image-removebg-preview.png"
-        src={logo}
-        className="logo_nat"
-      />
 
       <div className="container">
         <div className="image-container">
@@ -58,7 +52,7 @@ function App() {
           <label className="lbl">Tier Quiz</label>
         </div>
       </div>
-      <h5 className="efe"> by Deniz</h5>
+      <h5 className="efe">by Deniz</h5>
     </>
   );
 }
