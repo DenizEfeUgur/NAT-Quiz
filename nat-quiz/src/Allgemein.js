@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import "./allgemein.css";
 import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
+import soundFile from "./success-fanfare-trumpets-6185.mp3";
 
 const Allgemein = () => {
   const [scrollDisabled, setScrollDisabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const [timer, setTimer] = useState(0);
+  const [playSound, setPlaySound] = useState(false);
 
   const questions = [
     {
@@ -99,7 +101,7 @@ const Allgemein = () => {
       question: "wie viele kantone hat die Schweiz?",
       bild: "https://cdn.pixabay.com/photo/2016/10/21/19/05/switzerland-1758854_1280.png",
       options: ["23", "24", "25", "26"],
-      answer: "23",
+      answer: "26",
     },
     {
       question: "Was ist die chemische Formel für Wasser?",
@@ -178,10 +180,24 @@ const Allgemein = () => {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
+      setPlaySound(true);
       setShowConfetti(true);
       setShowScore(true);
     }
   };
+
+  useEffect(() => {
+    let audio;
+    if (playSound) {
+      audio = new Audio(soundFile);
+      audio.play();
+    }
+    return () => {
+      if (audio) {
+        audio.pause();
+      }
+    };
+  }, [playSound]);
 
   useEffect(() => {
     if (scrollDisabled) {
@@ -207,7 +223,7 @@ const Allgemein = () => {
       timer = setTimeout(() => {
         setScrollDisabled(false);
         setShowConfetti(false);
-      }, 4000);
+      }, 3500);
     }
     return () => {
       clearTimeout(timer);

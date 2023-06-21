@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import "./tier.css";
 import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
+import soundFile from "./success-fanfare-trumpets-6185.mp3";
 
 function Tier() {
   const [scrollDisabled, setScrollDisabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const [timer, setTimer] = useState(0);
+  const [playSound, setPlaySound] = useState(false);
 
   const questions = [
     {
@@ -73,7 +75,7 @@ function Tier() {
         "ca. 100 Billiarden",
         "ca. 1 Trillion",
       ],
-      answer: "Canberra",
+      answer: "ca. 1 Trillion",
     },
     {
       question: "Wie nennt man ein männliches Schwein?",
@@ -144,8 +146,8 @@ function Tier() {
     {
       question: "Welches Tier kann am längsten unter Wasser bleiben?",
       bild: "https://cdn.pixabay.com/photo/2013/07/12/16/36/snorkeling-151241_1280.png",
-      options: ["Schildkröte", "Pinguin", "Delphin", "Seehund"],
-      answer: "Delphin",
+      options: ["Schildkröte", "Schnabelwal", "Delfin", "Seehund"],
+      answer: "Schnabelwal",
     },
   ];
 
@@ -175,10 +177,24 @@ function Tier() {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
+      setPlaySound(true);
       setShowConfetti(true);
       setShowScore(true);
     }
   };
+
+  useEffect(() => {
+    let audio;
+    if (playSound) {
+      audio = new Audio(soundFile);
+      audio.play();
+    }
+    return () => {
+      if (audio) {
+        audio.pause();
+      }
+    };
+  }, [playSound]);
   useEffect(() => {
     if (scrollDisabled) {
       document.body.style.overflow = "hidden";

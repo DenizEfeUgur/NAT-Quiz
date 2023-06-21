@@ -43,6 +43,7 @@
   margin-bottom: 20px;
   font-family: Shadows Into;
   color: white;
+  
 }
 
 .answer-options {
@@ -162,5 +163,12 @@
 
   .card {
     max-width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  .question-count{
+    width: 100%;
   }
 }
