@@ -12,6 +12,7 @@ const Flaggen = () => {
   const [timer, setTimer] = useState(0);
   const [startTime, setStartTime] = useState(0);
   const [playSound, setPlaySound] = useState(false);
+  
   const flaggen = [
     {
       flag: "https://cdn.pixabay.com/photo/2012/04/10/23/11/switzerland-26891_1280.png",
@@ -70,7 +71,7 @@ const Flaggen = () => {
       answer: "Äthiopien",
     },
     {
-      flag: "https://cdn.pixabay.com/photo/2016/10/27/12/55/turkish-flag-1774834_1280.png",
+      flag: "https://cdn.pixabay.com/photo/2018/01/27/09/21/wallpaper-3110721_1280.jpg",
       options: ["Algerien", "Türkei", "Marokko", "Tunesien"],
       answer: "Türkei",
     },
@@ -82,7 +83,7 @@ const Flaggen = () => {
     {
       flag: "https://cdn.pixabay.com/photo/2013/07/13/14/17/swaziland-162432_1280.png",
       options: ["Benin", "Gabun", "Swasiland", "Mauritius"],
-      answer: "swasiland",
+      answer: "Swasiland",
     },
     {
       flag: "https://cdn.pixabay.com/photo/2013/07/13/14/16/lesotho-162340_1280.png",

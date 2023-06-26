@@ -32,7 +32,7 @@ const Allgemein = () => {
       answer: "8",
     },
     {
-      question: "Welches ist der längste Fluss der Welt?",
+      question: "Welcher ist der längste Fluss der Welt?",
       bild: "https://cdn.pixabay.com/photo/2015/08/26/17/35/water-908813_1280.png",
       options: ["Nil", "Amazonas", "Mississippi", "Jangtse"],
       answer: "Nil",
@@ -98,7 +98,7 @@ const Allgemein = () => {
     },
 
     {
-      question: "wie viele kantone hat die Schweiz?",
+      question: "Wie viele Kantone hat die Schweiz?",
       bild: "https://cdn.pixabay.com/photo/2016/10/21/19/05/switzerland-1758854_1280.png",
       options: ["23", "24", "25", "26"],
       answer: "26",

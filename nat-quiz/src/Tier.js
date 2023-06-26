@@ -38,7 +38,7 @@ function Tier() {
       answer: "Schwänin",
     },
     {
-      question: "Welches Tier existiert noch?",
+      question: "Welches Tier existiert NOCH?",
       bild: "https://cdn.pixabay.com/photo/2013/07/13/12/32/tombstone-159792_1280.png",
       options: ["Mamut", "Megaladon", "Wandertaube", "Nasenaffe"],
       answer: "Nasenaffe",
@@ -54,9 +54,9 @@ function Tier() {
       bild: "https://st.depositphotos.com/1052482/3034/i/450/depositphotos_30344971-stock-photo-manta-and-divers-on-the.jpg",
       options: [
         "Schmetterlingsrochen",
-        "Blattfisch",
+        "Sternrochen",
         "Manta Rochen",
-        "Flachfisch",
+        "Gitarrenrochen",
       ],
       answer: "Manta Rochen",
     },
@@ -154,6 +154,7 @@ function Tier() {
   function back() {
     window.location.reload();
   }
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
