@@ -1,7 +1,7 @@
 
 # NÄT-Quiz
 
-![index](./NAT-Quiz/nat-quiz/NAT-Quiz_indexpng.png)
+![index](./NAT-Quiz_indexpng.png)
 
 ## 🚀Getting Started
 1. First you have to clone the project:
