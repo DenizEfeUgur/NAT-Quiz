@@ -9,7 +9,7 @@ import soundFile from "./success-fanfare-trumpets-6185.mp3";
 const Flaggen = () => {
   const [scrollDisabled, setScrollDisabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState(0);  
   const [startTime, setStartTime] = useState(0);
   const [playSound, setPlaySound] = useState(false);
   
@@ -170,7 +170,7 @@ const Flaggen = () => {
     if (scrollDisabled) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.low = "auto";
     }
   }, [scrollDisabled]);
 
@@ -188,7 +188,7 @@ const Flaggen = () => {
     let timer;
     if (showConfetti) {
       timer = setTimeout(() => {
-        setScrollDisabled(false);
+        setScrollDisabled();
         setShowConfetti(false);
       }, 4000);
     }
