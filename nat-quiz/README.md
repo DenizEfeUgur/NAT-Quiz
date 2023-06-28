@@ -8,7 +8,7 @@
     `git clone https://github.com/Deniz-PT/NAT-Quiz.git`
 2. After that, you have to navigate to that folder in your Terminal:
    `cd NAT-Quiz`
-3. If you havent installed node you can do this [here](https://nodejs.org/en/download)
+3. If you haven't installed node you can do this [here](https://nodejs.org/en/download)
 4. After you installed node.js you have to install node modules:
    `npm install`
 5. Now you're ready to run the scripts.
