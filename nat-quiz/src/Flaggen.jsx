@@ -170,7 +170,7 @@ const Flaggen = () => {
     if (scrollDisabled) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.low = "auto";
+      document.body.style.overflow = "auto";
     }
   }, [scrollDisabled]);
 
