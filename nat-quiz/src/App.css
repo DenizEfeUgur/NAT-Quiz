@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   background-image: url("https://cdn.pixabay.com/photo/2022/03/15/08/23/school-supplies-7069763_1280.jpg");
 }
 
@@ -19,29 +19,33 @@ h1{
   color: white;
   display: flex;
   justify-content: center;
-  margin-bottom: -45px;
+  margin-bottom: 0;
+  font-size: 44px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 64px;
   justify-content: space-around;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 55px;
 }
 
 .quiz-item {
   display: flex;
   flex-direction: column;
+  gap: 16px;
   height: 300px;
+  align-items: center;
 }
 
 .pic {
   cursor: pointer;
-  height: 100%;
+  height: calc(100% - 59px);
   transition: transform 0.3s ease-in-out;
   display: block;
+  object-fit: contain;
 
 }
 
@@ -75,14 +79,6 @@ h1{
 /* Media Queries */
 
 @media (min-width: 480px) {
-  body {
-    font-size: 24px;
-  }
-
-  .pic {
-    margin-top: 30px;
-  }
-
   .image-container {
     flex-wrap: wrap;
     justify-content: center;
@@ -96,13 +92,21 @@ h1{
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 55px;
+  }
+
   .container {
     flex-direction: row;
   }
 
+  .quiz-item {
+    width: 33%;
+  }
+
   .pic {
-    margin-top: 50px;
+    max-width: 250px;
   }
 
   .image-container {
