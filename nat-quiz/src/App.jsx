@@ -3,16 +3,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
-import Allgemein from "./Allgemein";
-import Tier from "./Tier";
-import Flaggen from "./Flaggen";
+import AllgemeinQuiz from "./components/pages/AllgemeinQuiz";
+import FlaggenQuiz from "./components/pages/FlaggenQuiz";
 import { Main } from "./components/Main"
+import { BrowserRouter as Router, Routes, Navigate, Route, BrowserRouter  } from "react-router-dom";
+import TierQuiz from "./components/pages/TierQuiz";
+
 
 function App() {
   return (
     <>
-     <Main />
-     </>
+     <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/flaggenQuiz" element={<FlaggenQuiz />} />
+            <Route path="/allgemeinQuiz" element={<AllgemeinQuiz />} />
+            <Route path="/tierQuiz" element={<TierQuiz />} />
+          </Routes>
+      </BrowserRouter>
+    </>
     
   );
 }

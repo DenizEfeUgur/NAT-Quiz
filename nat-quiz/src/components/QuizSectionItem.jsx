@@ -1,14 +1,16 @@
 import "../App.css"
+import { Link } from "react-router-dom";
 
-export const QuizSectionItem = ({picture, description, quiz}) => {
+export const QuizSectionItem = ({picture, description, page}) => {
     return( 
         <div className="quiz-item">
-            <img
-                onClick={quiz}
-                alt="QuizSelectionItem"
-                className="pic"
-                src={picture}
-            />
+            <Link to={page}>
+                <img
+                    alt="QuizSelectionItem"
+                    className="pic"
+                    src={picture}
+                />
+            </Link>
             <label className="lbl">{description} Quiz</label>
         </div>
     )

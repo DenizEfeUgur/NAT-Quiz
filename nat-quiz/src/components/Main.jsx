@@ -1,5 +1,4 @@
 import {QuizSection} from "./QuizSection"
-import "../App.css"
 
 export const Main = () => {
     return ( 
