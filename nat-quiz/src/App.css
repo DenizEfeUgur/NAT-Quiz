@@ -2,72 +2,63 @@
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   background-image: url("https://cdn.pixabay.com/photo/2022/03/15/08/23/school-supplies-7069763_1280.jpg");
 }
 
 .efe{
   color: whitesmoke;
-
   display: flex;
   justify-content: center;
   margin-top: 90px;
   margin-right: 20px;
   font-size: 19px;
-  
 }
 
-.logo_nat{
-  width: auto;
-  height: 69px;
-  position: absolute;
-  margin-top: -69px;
-  
-  left: 92.98%;
-  /* bottom: 80%; */
-}
-
-.h1{
+h1{
   color: white;
   display: flex;
   justify-content: center;
-  margin-bottom: -45px;
-}
-
-.App .image-container img:hover {
-  transform: scale(1.1);
+  margin-bottom: 0;
+  font-size: 44px;
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 64px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.quiz-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 300px;
   align-items: center;
 }
 
-.image-container {
-  margin: 10px;
-  text-align: center;
-}
-
 .pic {
-  width: auto;
-  height: 19vw;
   cursor: pointer;
-  margin-top: 200px;
-  margin-bottom: 30px;
-}
+  height: calc(100% - 59px);
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  object-fit: contain;
 
-.lbl {
-  background-color: white;
-  padding: 10px;
-  font-weight: bold;
-  margin-top: -30px;
-  z-index: 1;
-  position: relative;
 }
 
 .pic:hover {
   transform: scale(1.01);
+}
+
+.lbl {
+  background-color: white;
+  padding: 7px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
 }
 
 .App {
@@ -85,62 +76,48 @@ body {
   height: 100%;
 }
 
-.App .image-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.App .image-container img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
 /* Media Queries */
 
-@media (max-width: 768px) {
-  .pic {
-    height: 200px;
-    margin-top: 50px;
-  }
-
-  .App .image-container {
+@media (min-width: 480px) {
+  .image-container {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
 
-  .App .image-container img {
-    width: 150px;
-    height: 150px;
+  .image-container img {
+    width: 100px;
+    height: 100px;
     margin: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 24px;
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .quiz-item {
+    width: 33%;
   }
 
   .pic {
-    height: 150px;
-    margin-top: 30px;
+    max-width: 250px;
   }
 
-  .App .image-container {
+  .image-container {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
 
-  .App .image-container img {
-    width: 100px;
-    height: 100px;
+  .image-container img {
+    width: 150px;
+    height: 150px;
     margin: 10px;
   }
 }

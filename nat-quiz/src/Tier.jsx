@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
-import "./tier.css";
+import "./Tier.css";
 import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
 import soundFile from "./success-fanfare-trumpets-6185.mp3";
 
