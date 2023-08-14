@@ -1,10 +1,8 @@
 import React from 'react'
-import { ButtonSection } from '../ButtonSection'
-import { TopBar } from '../TopBar'
-import { Question } from '../Question'
-import { useState } from 'react'
+import { Quiz } from "../Quiz"
+import Allgemein from '../../Allgemein';
 
-const questions = [
+const allgmeinQuestions = [
   {
     question: "Welches ist das grösste Land der Welt?",
     bild: "https://cdn.pixabay.com/photo/2016/04/01/22/32/world-1301744_1280.png",
@@ -145,18 +143,8 @@ const questions = [
   },
 ];
 
-
 const AllgemeinQuiz = () => {
-const [currentQuestion, setCurrentQuestion] = useState(0);
-
-  return (
-    <div className='question-section'>
-        <TopBar text={`Frage ${currentQuestion + 1} von ${questions.length}`}/>
-        <Question text={questions[currentQuestion].question} img={questions[currentQuestion].bild}/>
-        <ButtonSection answers={questions[currentQuestion].options}
-         onAnswer={(answer) => console.log(answer)}/>
-   </div>
-  )
-}
+  return <Quiz questions={allgmeinQuestions}/>
+};
 
 export default AllgemeinQuiz

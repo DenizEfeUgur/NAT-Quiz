@@ -10,21 +10,7 @@ import ReactDOM from "react-dom"
 
 export const QuizSection = () => {
 
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-
-    // function allgemeinQuiz() {
-    //   root.render(<Allgemein />);
-    // }
-    
-    // function flaggenQuiz() {
-    //   root.render(<Flaggen />);
-    // }
-    
-    // function ZliQuiz() {
-    //   root.render(<Tier />);
-    // }
-
-    return (
+   return (
         <div className="container">
             <QuizSectionItem page="/flaggenQuiz" picture="https://cdn.pixabay.com/photo/2013/07/12/19/18/world-154527_1280.png" description="Flaggen"/>
             <QuizSectionItem page="/allgemeinQuiz" picture="https://cdn.pixabay.com/photo/2017/01/31/00/09/books-2022464_1280.png" description="Allgemeinwissen"/>

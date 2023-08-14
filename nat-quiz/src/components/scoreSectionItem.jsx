@@ -1,3 +1,6 @@
-export const scoreSectionItem = () => {
-    
+
+export const ScoreSectionItem = () => {
+   return (
+    <div>hey</div>
+   );
 }

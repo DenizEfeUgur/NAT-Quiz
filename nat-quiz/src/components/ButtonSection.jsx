@@ -1,16 +1,14 @@
 import { Button } from "./Button"
 
 export const ButtonSection = ({onAnswer, answers}) => {
-    
     return(
         <>
-            {answers.map((data) => {
-                for(let i=0; i <= answers.length; i++){
+            {answers.map((answer) => {
                 return (
                     <div className="answer-options">
-                        <Button onClick={onAnswer} value={answers[i]}/>
+                        <Button onClick={() => onAnswer(answer)} value={answer}/>
                     </div>
-                )}
+                )
             })}
         </>
     )

@@ -1,7 +1,7 @@
-import { scoreSectionItem } from "./scoreSectionItem"
+import { ScoreSectionItem } from "./ScoreSectionItem"
 
-export const scoreSection = () => {
-    for (let i = 0; i <= question.lenght; i++) {
-        <scoreSectionItem />
-    }
-}
+export const ScoreSection = () => {
+    return ( 
+        <ScoreSectionItem />
+    )
+};
