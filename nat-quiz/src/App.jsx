@@ -15,7 +15,7 @@ function App() {
     <>
      <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/NAT-Quiz" element={<Main />} />
             <Route path="/flaggenQuiz" element={<FlaggenQuiz />} />
             <Route path="/allgemeinQuiz" element={<AllgemeinQuiz />} />
             <Route path="/tierQuiz" element={<TierQuiz />} />
