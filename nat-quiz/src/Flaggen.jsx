@@ -10,7 +10,6 @@ const Flaggen = () => {
   const [scrollDisabled, setScrollDisabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const [timer, setTimer] = useState(0);  
-  const [startTime, setStartTime] = useState(0);
   const [playSound, setPlaySound] = useState(false);
   
   const flaggen = [
@@ -116,9 +115,6 @@ const Flaggen = () => {
       answer: "Kasachstan",
     },
   ];
-  const startQuiz = () => {
-    setStartTime(Date.now());
-  };
 
   function back() {
     window.location.reload();
@@ -276,6 +272,7 @@ const Flaggen = () => {
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/850/850960.png"
                   className="time-image"
+                  alt="Timer"
                 />
                 {timer}
               </span>

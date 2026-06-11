@@ -265,6 +265,7 @@ function Tier() {
                       <img
                         className="image"
                         src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png"
+                        alt="Korrekt"
                       />
                     </>
                   )}
@@ -288,6 +289,7 @@ function Tier() {
                       <img
                         className="image"
                         src="https://static.vecteezy.com/system/resources/previews/017/178/056/non_2x/red-cross-mark-on-transparent-background-free-png.png"
+                        alt="Falsch"
                       />
                     </>
                   )}
@@ -306,6 +308,7 @@ function Tier() {
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/850/850960.png"
                   className="time-image"
+                  alt="Timer"
                 />
                 {timer}
               </span>
